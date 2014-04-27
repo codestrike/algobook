@@ -1,3 +1,9 @@
+/**
+* @author: Ashish A Gaikwad <ash.gkwd@gmail.com>
+* Cohen Sutherland line clipping algorithm in C. 
+* Runs only on windows due to dependency on 'graphics.h' header file.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <graphics.h>
