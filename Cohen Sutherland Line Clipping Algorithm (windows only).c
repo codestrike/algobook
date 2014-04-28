@@ -56,7 +56,8 @@ void cohen_sutherland(double x1, double y1, double x2, double y2, double xmin, d
             } else {
                 y = y1 + (y2 - y1) * (xmin - x1) / (x2 - x1);
                 x = xmin;
-            } if (outcode_ex == outcode1) {
+            } 
+            if (outcode_ex == outcode1) {
                 x1 = x;
                 y1 = y;
                 outcode1 = compute_outcode(x1, y1, xmin, ymin, xmax, ymax);
@@ -87,7 +88,7 @@ void main() {
     printf("Enter the x- and y-coordinates of the left-top and right-bottom corners of the clip window:\n");
     for (i = 0; i < 4; i++) scanf("%d", & clip[i]);
 
-    initgraph( & gd, & gm, "");
+    initgraph(&gd, &gm, "");
     rectangle(clip[0], clip[1], clip[2], clip[3]);
     for (i = 0; i < n; i++) line(ln[i][0], ln[i][1], ln[i][2], ln[i][3]);
     getch();

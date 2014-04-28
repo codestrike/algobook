@@ -15,11 +15,11 @@ void bezier(int x[4], int y[4]) {
     double u, a, b, c, d, xt, yt;
     initgraph(&gd, &gm, "");
 
-    for (t = 0.0; u < 1.0; u += 0.0005) {
+    for (u = 0.0; u < 1.0; u += 0.0005) {
     	a = pow(1 - u, 3);
     	b = pow(1 - u, 2) * 3 * u;
-    	c = pow(t, 2) * 3 * (1 - u);
-    	d = pow(t, 3);
+    	c = pow(u, 2) * 3 * (1 - u);
+    	d = pow(u, 3);
         xt = a * x[0] + b * x[1] + c * x[2] + d * x[3];
         yt = a * y[0] + b * y[1] + c * y[2] + d * y[3];
         putpixel(xt, yt, WHITE);
